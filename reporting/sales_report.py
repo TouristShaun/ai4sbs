@@ -1,0 +1,1 @@
+# This is a placeholder for the sales_report script. We can add functionality to it later.
