@@ -1,0 +1,1 @@
+# This is a placeholder for the invoice_generation script. We can add functionality to it later.
