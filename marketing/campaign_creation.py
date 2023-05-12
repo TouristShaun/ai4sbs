@@ -1,0 +1,1 @@
+# This is a placeholder for the campaign_creation script. We can add functionality to it later.
