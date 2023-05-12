@@ -1,0 +1,1 @@
+# This is a placeholder for the welcome_email script. We can add functionality to it later.
