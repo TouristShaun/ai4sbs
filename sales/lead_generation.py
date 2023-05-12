@@ -1,0 +1,1 @@
+# This is a placeholder for the lead_generation script. We can add functionality to it later.
