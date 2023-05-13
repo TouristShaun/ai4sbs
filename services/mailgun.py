@@ -1,4 +1,10 @@
-# This file will contain functions for interacting with the Mailgun API.
+import requests
 
-# For each function, you'll need to use the Mailgun API to send emails, get status of sent emails, etc.
-# To switch to a different email service, you'll need to replace these functions with equivalent functions using the other service's API.
+def send_email(to, subject, text):
+    return requests.post(
+        "https://api.mailgun.net/v3/your-domain.com/messages",
+        auth=("api", "your-api-key"),
+        data={"from": "Excited User <mailgun@your-domain.com>",
+                "to": [to],
+                "subject": subject,
+                "text": text})
