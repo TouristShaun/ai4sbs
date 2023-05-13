@@ -1,4 +1,14 @@
-# This file will contain functions for interacting with the Eventbrite API.
+import requests
 
-# For each function, you'll need to use the Eventbrite API to create, manage, and update events.
-# To switch to a different event management platform, you'll need to replace these functions with equivalent functions using the other platform's API.
+def create_event(name, description, start_time, end_time, location):
+    return requests.post(
+        "https://www.eventbrite.com/api/v3/events",
+        headers={"Content-Type": "application/json"},
+        json={
+            "name": name,
+            "description": description,
+            "start_time": start_time,
+            "end_time": end_time,
+            "location": location
+        }
+    )
