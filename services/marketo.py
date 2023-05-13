@@ -1,4 +1,11 @@
-# This file will contain functions for interacting with the Marketo API.
+import requests
 
-# For each function, you'll need to use the Marketo API to manage marketing campaigns, sending marketing emails, etc.
-# To switch to a different marketing automation service, you'll need to replace these functions with equivalent functions using the other service's API.
+def create_campaign(name, description, email_addresses):
+    return requests.post(
+        "https://api.marketo.com/v1/campaigns",
+        json={
+            "name": name,
+            "description": description,
+            "emailAddresses": email_addresses
+        }
+    )
