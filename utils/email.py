@@ -1,0 +1,1 @@
+# This is a placeholder for the email sending functions. We can add functionality to it later.
