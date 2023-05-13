@@ -1,0 +1,1 @@
+# This is a placeholder for the database connection and query execution functions. We can add functionality to it later.
