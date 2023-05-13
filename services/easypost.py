@@ -1,3 +1,9 @@
-# This file will contain functions for interacting with the EasyPost API.
+import easypost
+easypost.api_key = "your-api-key"
 
-# For each function, you'll need to use the EasyPost API to create, manage, and update shipments.	# To switch to a different shipping service, you'll need to replace these functions with equivalent functions using the other service's API.
+def create_shipment(to_address, from_address, parcel):
+    to_address = easypost.Address(to_address)
+    from_address = easypost.Address(from_address)
+    parcel = easypost.Parcel(parcel)
+    shipment = easypost.Shipment.create(to_address=to_address, from_address=from_address, parcel=parcel)
+    return shipment
