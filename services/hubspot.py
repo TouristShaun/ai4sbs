@@ -1,4 +1,14 @@
-# This file will contain functions for interacting with the Hubspot API.
+import requests
 
-# For each function, you'll need to use the Hubspot API to create, read, update, and delete customer data.
-# To switch to a different CRM, you'll need to replace these functions with equivalent functions using the other CRM's API.
+def create_contact(email, first_name, last_name):
+    return requests.post(
+        "https://api.hubspot.com/contacts/v1/contact/",
+        headers={"Content-Type": "application/json"},
+        json={
+            "properties": [
+                {"name": "email", "value": email},
+                {"name": "firstname", "value": first_name},
+                {"name": "lastname", "value": last_name}
+            ]
+        }
+    )
